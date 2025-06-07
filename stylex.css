@@ -1,0 +1,402 @@
+/* Global Styles */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9; /* light gray background */
+  background-image: url(bg1.jpg);
+  background-size: contain;
+}
+
+/* Header Styles */
+
+header {
+  background-color: #333; /* dark gray background */
+  padding: 1em;
+  text-align: center;
+  background-image:url(cx.jpg) ;
+  background-position: center;
+  background-size: cover;
+}
+
+header img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+header h1 {
+  color: #fff; /* white text */
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+/* Navigation Styles */
+
+nav ul {
+  list-style:circle;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content:space-around;
+  
+ 
+  
+}
+
+nav li {
+  margin-right: 20px;
+}
+
+nav a {
+  color: #ffffff; /* white text */
+  text-decoration:solid;
+  transition: color 0.2s ease;
+ 
+}
+
+nav a:hover {
+  color: #ccc; /* light gray text on hover */
+}
+
+/* Button Styles */
+
+button {
+  background-color: #4CAF50; /* green background */
+  color: #fff; /* white text */
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: #3e8e41; /* darker green background on hover */
+}
+
+/* Random Color Palette */
+
+:root {
+  --primary-color: #3498db; /* blue */
+  --secondary-color: #f1c40f; /* orange */
+  --accent-color: #9b59b6; /* purple */
+  --background-color: #f9f9f9; /* light gray */
+}
+
+/* Apply random color palette to buttons */
+
+button {
+  background-color: var(--primary-color);
+}
+
+button:nth-child(2n) {
+  background-color: var(--secondary-color);
+}
+
+button:nth-child(3n) {
+  background-color: var(--accent-color);
+}
+
+/* Footer Styles */
+
+footer {
+  background-color: #333; /* dark gray background */
+  padding: 1em;
+  text-align: center;
+  color: #fff; /* white text */
+}
+
+footer a {
+  color: #fff; /* white text */
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+footer a:hover {
+  color: #ccc; /* light gray text on hover */
+}
+
+footer p {
+  margin-top: 10px;
+}
+/* Slideshow Styles */
+
+.slideshow {
+  max-width: 400px; /* adjust the width to fit your needs */
+  margin: 40px auto; /* add some margin to center the slideshow */
+  position: relative; /* for absolute positioning of slide controls */
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.slide img {
+  width: 100%; /* make images full-width */
+  height: 200px; /* adjust the height to fit your needs */
+  object-fit: cover; /* scale images to fit the container */
+  border-radius: 10px;
+}
+
+figcaption {
+  font-size: 16px;
+  color: #ffffff;
+  margin-top: 10px;
+  text-align: center;
+  background: #333;
+}
+
+.prev,.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,.next:hover {
+  background-color: #555;
+}
+/* CSS */
+.movie-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie {
+  position: relative;
+  margin: 50px;
+  width: 200px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+  border-radius: 10px;
+}
+
+.movie:hover img {
+  transform: scale(1.1);
+  
+}
+
+.movie-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  padding: 20px;
+  display: none;
+}
+
+.movie:hover .movie-details {
+  display: block;
+}
+
+.movie-details h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.movie-details p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+/* CSS Code */
+
+.upcoming-movies {
+  display: block;
+  margin: 40px auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.upcoming-movies:hover {
+  background-color: #0069d9;
+  transition: 0.3s;
+}
+
+.upcoming-movies:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* CSS Code */
+
+.movie-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-image {
+  margin: 20px;
+  position: relative;
+}
+
+.movie-image img {
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.book-now {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #007bff;
+  color: #fff;
+}
+
+.book-now:hover {
+  background-color: #0069d9;
+  transition: 0.3s;
+}
+
+.book-now:active {
+  transform: translateY(2px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Style the search box container */
+.search-box {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px; /* adjust the width as needed */
+  margin: 20px auto; /* center the search box */
+}
+
+/* Style the search input field */
+.search-box input[type="search"] {
+  width: 1%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Style the search button */
+.search-box button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Hover effect for the search button */
+.search-box button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Add a transition effect to the search box */
+.search-box {
+  transition: box-shadow 0.3s;
+}
+
+/* Hover effect for the search box */
+.search-box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* Style the search box container */
+.search-box {
+  background-color: #f7f7f7;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 300px; /* adjust the width as needed */
+  margin: 20px auto; /* center the search box */
+  display: flex; /* add this to make the input and button inline */
+  align-items: center; /* vertically center the input and button */
+}
+
+/* Style the search input field */
+.search-box input[type="search"] {
+  width: 80%; /* adjust the width as needed */
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+/* Style the search button */
+.search-box button[type="submit"] {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style the search icon */
+.search-box button[type="submit"] i {
+  font-size: 16px;
+}
+
+/* Hover effect for the search button */
+.search-box button[type="submit"]:hover {
+  background-color: #3e8e41;
+}
+
+/* Add a transition effect to the search box */
+.search-box {
+  transition: box-shadow 0.3s;
+}
+
+/* Hover effect for the search box */
+.search-box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
